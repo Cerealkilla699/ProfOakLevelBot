@@ -16,7 +16,7 @@ handler = logging.StreamHandler(sys.stdout)
 
 bot = commands.Bot(command_prefix="^", intents=discord.Intents.all())
 
-dbconfig = {"host": "localhost", "user": "PROFOAK", "password": "", "database": "db1"}
+dbconfig = {"host": "", "user": "", "password": "", "database": ""}
 pool = mariadb.ConnectionPool(pool_size=5, pool_name="mypool", **dbconfig)
 mydb = pool.get_connection()
 cur = mydb.cursor()
